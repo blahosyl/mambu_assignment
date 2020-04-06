@@ -3,7 +3,7 @@
   "info": {
     "version": "v2",
     "title": "Tasks",
-    "description": "Tasks are used to keep track of to-dos in Mambu; they are assigned to system users and can be linked to specific clients or groups.   \n\nUsing the `/tasks` endpoint, you can retrieve, create, modify, replace or delete tasks. "
+    "description": "Tasks are used to keep track of to-dos in Mambu. They are assigned to system users and can be linked to specific clients or groups.   \n\nUsing the `/tasks` endpoint, you can retrieve, create, modify, replace or delete tasks. "
   },
   "host": "localhost:8889",
   "basePath": "/api",
@@ -237,7 +237,7 @@
       },
       "delete": {
         "summary": "Delete an existing task",
-        "description": "Delete an existing tasks for all users, including clients and groups.\n\nOnce a task is deleted, it will not be possible to open it again.",
+        "description": "Delete an existing tasks for all users, including clients and groups.\n\n**WARNING:** Once a task is deleted, it cannot be opened again!",
         "operationId": "delete",
         "consumes": [
           "application/json"
@@ -265,7 +265,8 @@
             },
             "schema": {
               "$ref": "#/definitions/ErrorResponse"
-            }
+            },
+            "examples": {}
           },
           "401": {
             "description": "Unauthorized: your credentials are not valid.",
@@ -392,8 +393,8 @@
         "tags": [
           "Methods"
         ],
-        "summary": "List all tasks",
-        "description": "Retrieve all tasks, optionally filtered by **user**, **client**, **group** and/or **task status**.\n\n\n\nAll parameters are optional. Endpoint returns all tasks if no parameters are specified.\n\nThe optional parameters `paginationDetails`, `limit`, `offset` and `detailsLevel` can be used to limit the number of responses returned.",
+        "summary": "List and filter tasks",
+        "description": "Retrieve all tasks, optionally filtered by **user**, **client**, **group** and/or **task status**.\n\n\nAll parameters are optional. The endpoint returns all tasks if no parameters are specified.\n\nThe optional parameters `paginationDetails`, `limit`, `offset` and `detailsLevel` can be used to limit the number and length of responses returned.",
         "operationId": "getAll",
         "consumes": [
           "application/json"
@@ -455,14 +456,14 @@
           {
             "name": "clientId",
             "in": "query",
-            "description": "The id or encoded key of the client",
+            "description": "The id or encoded key of the client.",
             "required": false,
             "type": "string"
           },
           {
             "name": "groupId",
             "in": "query",
-            "description": "The id of encoded key of the group",
+            "description": "The id of encoded key of the group.",
             "required": false,
             "type": "string"
           },
@@ -717,6 +718,9 @@
         }
       },
       "title": "",
+      "x-tags": [
+        "Models"
+      ],
       "properties": {
         "lastModifiedDate": {
           "type": "string",
@@ -805,9 +809,6 @@
       "required": [
         "dueDate",
         "description"
-      ],
-      "x-tags": [
-        "Models"
       ]
     },
     "RestError": {
@@ -1932,7 +1933,19 @@
       },
       "x-tags": [
         "Models"
-      ]
+      ],
+      "x-examples": {
+        "Example": {
+          "errors": [
+            {
+              "errorCode": 1,
+              "errorSource": "INVALID_BASIC_AUTHORIZATION",
+              "errorReason": "INVALID_BASIC_AUTHORIZATION"
+            }
+          ]
+        }
+      },
+      "title": ""
     }
   }
 }
