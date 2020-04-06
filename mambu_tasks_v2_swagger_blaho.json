@@ -386,14 +386,6 @@
           }
         ]
       },
-      "parameters": [
-        {
-          "type": "string",
-          "name": "",
-          "in": "path",
-          "required": true
-        }
-      ]
     },
     "/tasks": {
       "get": {
