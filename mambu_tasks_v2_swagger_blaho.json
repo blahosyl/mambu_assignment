@@ -167,7 +167,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Task updated",
+            "description": "Task updated.",
             "responseSchema": {
               "$ref": "#/definitions/Task"
             },
@@ -256,7 +256,7 @@
         ],
         "responses": {
           "204": {
-            "description": "Task deleted"
+            "description": "Task deleted."
           },
           "400": {
             "description": "A validation error occurred.",
@@ -481,7 +481,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Tasks list retrieved",
+            "description": "Tasks list retrieved.",
             "headers": {
               "Items-Limit": {
                 "type": "integer",
