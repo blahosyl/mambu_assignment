@@ -104,11 +104,7 @@
             }
           }
         },
-        "security": [
-          {
-            "basic": []
-          }
-        ]
+        "security": []
       },
       "put": {
         "tags": [
@@ -229,15 +225,11 @@
             }
           }
         },
-        "security": [
-          {
-            "basic": []
-          }
-        ]
+        "security": []
       },
       "delete": {
         "summary": "Delete an existing task",
-        "description": "Delete an existing tasks for all users, including clients and groups.\n\n**WARNING:** Once a task is deleted, it cannot be opened again!",
+        "description": "Delete an existing tasks for all users, including clients and groups.\n\n**WARNING:** Once a task is deleted, it cannot be retrieved again!",
         "operationId": "delete",
         "consumes": [
           "application/json"
@@ -296,11 +288,7 @@
             }
           }
         },
-        "security": [
-          {
-            "basic": []
-          }
-        ],
+        "security": [],
         "tags": [
           "Methods"
         ]
@@ -336,6 +324,31 @@
               "items": {
                 "$ref": "#/definitions/PatchOperation"
               }
+            },
+            "x-examples": {
+              "Example": [
+                {
+                  "from": "string",
+                  "op": "ADD",
+                  "path": "string",
+                  "value": {}
+                }
+              ]
+            }
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Patch operations to be applied to a resource.",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/PatchOperation"
+              }
+            },
+            "x-examples": {
+              "example-1": {}
             }
           }
         ],
@@ -381,11 +394,7 @@
             }
           }
         },
-        "security": [
-          {
-            "basic": []
-          }
-        ]
+        "security": []
       }
     },
     "/tasks": {
@@ -449,7 +458,7 @@
           {
             "name": "username",
             "in": "query",
-            "description": "Mambu login user name. Should not be confused with the user's `id`.",
+            "description": "Mambu login user name. Not the same as `userId`.  ",
             "required": false,
             "type": "string"
           },
@@ -470,7 +479,7 @@
           {
             "name": "status",
             "in": "query",
-            "description": "The task status",
+            "description": "The task status.  ",
             "required": false,
             "type": "string",
             "enum": [
@@ -487,17 +496,17 @@
               "Items-Limit": {
                 "type": "integer",
                 "format": "int32",
-                "description": "Pagination details, the requested page size"
+                "description": "Pagination details, the requested page size in the response."
               },
               "Items-Offset": {
                 "type": "integer",
                 "format": "int32",
-                "description": "Pagination details, the index of the first returned item"
+                "description": "Pagination details, the index of the first returned item in the response."
               },
               "Items-Total": {
                 "type": "integer",
                 "format": "int32",
-                "description": "Pagination details, the total available items"
+                "description": "Pagination details, the total available items in the response."
               }
             },
             "responseSchema": {
@@ -560,11 +569,7 @@
             }
           }
         },
-        "security": [
-          {
-            "basic": []
-          }
-        ]
+        "security": []
       },
       "post": {
         "tags": [
@@ -680,20 +685,15 @@
             }
           }
         },
-        "security": [
-          {
-            "basic": []
-          }
-        ]
+        "security": []
       }
     }
   },
   "securityDefinitions": {
-    "basic": {
+    "API Key - 1": {
       "name": "API Key",
       "type": "apiKey",
-      "in": "query",
-      "description": "Replace `localhost` above with your Mambu tenant URL.\n\nPlease note that a Mambu user must first have API access rights enabled on their account before using the API. For more information about access to the Mambu API, please see [API & Apps Authentication](https://support.mambu.com/docs/api-apps-authentication)."
+      "in": "query"
     }
   },
   "definitions": {
@@ -1865,11 +1865,22 @@
       },
       "x-tags": [
         "Models"
-      ]
+      ],
+      "x-examples": {
+        "Example": {
+          "errors": [
+            {
+              "errorCode": 1,
+              "errorSource": "INVALID_BASIC_AUTHORIZATION",
+              "errorReason": "INVALID_BASIC_AUTHORIZATION"
+            }
+          ]
+        }
+      }
     },
     "PatchOperation": {
       "type": "object",
-      "description": "A single change that needs to be made to a resource",
+      "description": "A single change made to a resource object.",
       "x-examples": {
         "Example": [
           {
@@ -1945,7 +1956,8 @@
           ]
         }
       },
-      "title": ""
+      "title": "",
+      "description": "The basic schema for error responses is listed below. For more details, please consult the [Mambu error response page](https://support.mambu.com/docs/api-response-error-codes).  "
     }
   }
 }
