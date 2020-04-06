@@ -1876,7 +1876,8 @@
             }
           ]
         }
-      }
+      },
+      "description": "The basic schema for error responses is listed below. For more details, please consult the [Mambu error response page](https://support.mambu.com/docs/api-response-error-codes).  "
     },
     "PatchOperation": {
       "type": "object",
@@ -1930,7 +1931,17 @@
       },
       "x-tags": [
         "Models"
-      ]
+      ],
+      "x-examples": {
+        "Example": [
+          {
+            "from": "string",
+            "op": "ADD",
+            "path": "string",
+            "value": {}
+          }
+        ]
+      }
     },
     "ErrorResponse": {
       "type": "object",
