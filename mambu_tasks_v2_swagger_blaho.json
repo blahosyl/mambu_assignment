@@ -3,7 +3,7 @@
   "info": {
     "version": "v2",
     "title": "Tasks",
-    "description": "Tasks are used to keep track of to-dos in Mambu. They are assigned to system users and can be linked to specific clients or groups.   \n\nUsing the `/tasks` endpoint, you can retrieve, create, modify, replace or delete tasks. "
+    "description": "Tasks are used to keep track of to-dos in Mambu. They are assigned to system users and can be linked to specific clients or groups.   \n\nUsing the `/tasks` endpoint, you can retrieve, create, modify, replace or delete tasks. \n\n**Authentication**\n\nPlease note that a Mambu user must first have API access rights enabled on their account before using the API. Each API request needs to be authenticated with `username` and `password` in the request.\n\nAlso replace `localhost` below with your Mambu tenant URL in the path.\n\nFor more information about access to the Mambu API, please see [API & Apps Authentication](https://support.mambu.com/docs/api-apps-authentication).\n\n"
   },
   "host": "localhost:8889",
   "basePath": "/api",
@@ -689,13 +689,7 @@
       }
     }
   },
-  "securityDefinitions": {
-    "API Key - 1": {
-      "name": "API Key",
-      "type": "apiKey",
-      "in": "query"
-    }
-  },
+  "securityDefinitions": {},
   "definitions": {
     "Task": {
       "type": "object",
