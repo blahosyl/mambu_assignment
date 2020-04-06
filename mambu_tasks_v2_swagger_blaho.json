@@ -35,7 +35,7 @@
           {
             "name": "taskId",
             "in": "path",
-            "description": "The id or encoded key of the task",
+            "description": "The id or encoded key of the task.",
             "required": true,
             "type": "string"
           }
@@ -77,7 +77,7 @@
             }
           },
           "401": {
-            "description": "UNAUTHORIZED",
+            "description": "Unauthorized: your credentials are not valid.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -86,7 +86,7 @@
             }
           },
           "403": {
-            "description": "Forbidden",
+            "description": "Forbidden: you do not have the necessary permissions for this resource.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -95,7 +95,7 @@
             }
           },
           "404": {
-            "description": "Task not found",
+            "description": "Task not found.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -127,7 +127,7 @@
           {
             "name": "taskId",
             "in": "path",
-            "description": "The id or encoded key of the task",
+            "description": "The id or encoded key of the task.",
             "required": true,
             "type": "string"
           },
@@ -193,7 +193,7 @@
             }
           },
           "400": {
-            "description": "A Validation error occurred",
+            "description": "A validation error occurred",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -202,7 +202,7 @@
             }
           },
           "401": {
-            "description": "UNAUTHORIZED",
+            "description": "Unauthorized: your credentials are not valid.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -211,7 +211,7 @@
             }
           },
           "403": {
-            "description": "Forbidden",
+            "description": "Forbidden: you do not have the necessary permissions for this resource.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -220,7 +220,7 @@
             }
           },
           "404": {
-            "description": "Task not found",
+            "description": "Task not found.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -249,7 +249,7 @@
           {
             "name": "taskId",
             "in": "path",
-            "description": "The id or encoded key of the task",
+            "description": "The id or encoded key of the task.",
             "required": true,
             "type": "string"
           }
@@ -259,7 +259,7 @@
             "description": "Task deleted"
           },
           "400": {
-            "description": "A Validation error occurred",
+            "description": "A validation error occurred",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -268,7 +268,7 @@
             }
           },
           "401": {
-            "description": "UNAUTHORIZED",
+            "description": "Unauthorized: your credentials are not valid.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -277,7 +277,7 @@
             }
           },
           "403": {
-            "description": "Forbidden",
+            "description": "Forbidden: you do not have the necessary permissions for this resource.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -286,7 +286,7 @@
             }
           },
           "404": {
-            "description": "Task not found",
+            "description": "Task not found.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -343,7 +343,7 @@
             "description": "Task updated"
           },
           "400": {
-            "description": "A Validation error occurred",
+            "description": "A validation error occurred",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -353,7 +353,7 @@
             "examples": {}
           },
           "401": {
-            "description": "UNAUTHORIZED",
+            "description": "Unauthorized: your credentials are not valid.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -362,7 +362,7 @@
             }
           },
           "403": {
-            "description": "Forbidden",
+            "description": "Forbidden: you do not have the necessary permissions for this resource.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -371,7 +371,7 @@
             }
           },
           "404": {
-            "description": "Task not found",
+            "description": "Task not found.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -532,7 +532,7 @@
             }
           },
           "400": {
-            "description": "A Validation error occurred",
+            "description": "A validation error occurred",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -541,7 +541,7 @@
             }
           },
           "401": {
-            "description": "UNAUTHORIZED",
+            "description": "Unauthorized: your credentials are not valid.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -550,7 +550,7 @@
             }
           },
           "403": {
-            "description": "Forbidden",
+            "description": "Forbidden: you do not have the necessary permissions for this resource.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -626,7 +626,7 @@
             "examples": {}
           },
           "201": {
-            "description": "Task created",
+            "description": "Task created.",
             "responseSchema": {
               "$ref": "#/definitions/Task"
             },
@@ -652,7 +652,7 @@
             }
           },
           "400": {
-            "description": "A Validation error occurred",
+            "description": "A validation error occurred",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -661,7 +661,7 @@
             }
           },
           "401": {
-            "description": "UNAUTHORIZED",
+            "description": "Unauthorized: your credentials are not valid.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -670,7 +670,7 @@
             }
           },
           "403": {
-            "description": "Forbidden",
+            "description": "Forbidden: you do not have the necessary permissions for this resource.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
