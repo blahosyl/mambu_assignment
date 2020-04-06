@@ -20,7 +20,7 @@
     "/tasks/{taskId}": {
       "get": {
         "tags": [
-          "Tasks"
+          "Methods"
         ],
         "summary": "Get task by ID",
         "description": "Retrieve a single task specified by its ID or encoded key.",
@@ -112,7 +112,7 @@
       },
       "put": {
         "tags": [
-          "Tasks"
+          "Methods"
         ],
         "summary": "Update an existing task",
         "description": "Change multiple values in an existing task object.",
@@ -236,9 +236,6 @@
         ]
       },
       "delete": {
-        "tags": [
-          "Tasks"
-        ],
         "summary": "Delete an existing task",
         "description": "Delete an existing tasks for all users, including clients and groups.\n\nOnce a task is deleted, it will not be possible to open it again.",
         "operationId": "delete",
@@ -302,11 +299,14 @@
           {
             "basic": []
           }
+        ],
+        "tags": [
+          "Methods"
         ]
       },
       "patch": {
         "tags": [
-          "Tasks"
+          "Methods"
         ],
         "summary": "Make a single change to an existing task",
         "description": "Add, replace, remove or move a single value in an existing task object.",
@@ -398,7 +398,7 @@
     "/tasks": {
       "get": {
         "tags": [
-          "Tasks"
+          "Methods"
         ],
         "summary": "List all tasks",
         "description": "Retrieve all tasks, optionally filtered by **user**, **client**, **group** and/or **task status**.\n\n\n\nAll parameters are optional. Endpoint returns all tasks if no parameters are specified.\n\nThe optional parameters `paginationDetails`, `limit`, `offset` and `detailsLevel` can be used to limit the number of responses returned.",
@@ -575,7 +575,7 @@
       },
       "post": {
         "tags": [
-          "Tasks"
+          "Methods"
         ],
         "summary": "Create a new task",
         "description": "Create a new tasks with the specified parameters.\n\nThe status of a newly created task will be set to `open`, unless specified otherwise.",
@@ -813,6 +813,9 @@
       "required": [
         "dueDate",
         "description"
+      ],
+      "x-tags": [
+        "Models"
       ]
     },
     "RestError": {
@@ -1866,7 +1869,10 @@
             "TAXES_ON_INTEREST_NOT_SUPPORTED"
           ]
         }
-      }
+      },
+      "x-tags": [
+        "Models"
+      ]
     },
     "PatchOperation": {
       "type": "object",
@@ -1908,13 +1914,19 @@
       "required": [
         "op",
         "path"
+      ],
+      "x-tags": [
+        "Models"
       ]
     },
     "PatchOperationsList": {
       "type": "array",
       "items": {
         "$ref": "#/definitions/PatchOperation"
-      }
+      },
+      "x-tags": [
+        "Models"
+      ]
     },
     "ErrorResponse": {
       "type": "object",
@@ -1925,7 +1937,10 @@
             "$ref": "#/definitions/RestError"
           }
         }
-      }
+      },
+      "x-tags": [
+        "Models"
+      ]
     }
   }
 }
