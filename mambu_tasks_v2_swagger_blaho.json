@@ -193,7 +193,7 @@
             }
           },
           "400": {
-            "description": "A validation error occurred",
+            "description": "A validation error occurred.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -259,7 +259,7 @@
             "description": "Task deleted"
           },
           "400": {
-            "description": "A validation error occurred",
+            "description": "A validation error occurred.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -343,7 +343,7 @@
             "description": "Task updated"
           },
           "400": {
-            "description": "A validation error occurred",
+            "description": "A validation error occurred.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -532,7 +532,7 @@
             }
           },
           "400": {
-            "description": "A validation error occurred",
+            "description": "A validation error occurred.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
@@ -652,7 +652,7 @@
             }
           },
           "400": {
-            "description": "A validation error occurred",
+            "description": "A validation error occurred.",
             "responseSchema": {
               "$ref": "#/definitions/ErrorResponse"
             },
