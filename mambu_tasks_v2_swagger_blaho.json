@@ -3,7 +3,7 @@
   "info": {
     "version": "v2",
     "title": "Tasks",
-    "description": "Tasks are used to keep track of to-dos in Mambu; they are assigned to system users and can be linked to specific clients or groups.   \n\nUsing the `/tasks` endpoint, you can retrieve, create, modify, replace or delete tasks. "
+    "description": "Tasks are used to keep track of to-dos in Mambu; they are assigned to system users and can be linked to specific clients or groups.   \n\nUsing the `/tasks` endpoint, you can retrieve, create, modify or delete tasks. "
   },
   "host": "localhost:8889",
   "basePath": "/api",
@@ -19,9 +19,6 @@
   "paths": {
     "/tasks/{taskId}": {
       "get": {
-        "tags": [
-          "Tasks"
-        ],
         "summary": "Get task by ID",
         "description": "Retrieve a single task specified by its ID or encoded key.",
         "operationId": "getById",
@@ -108,6 +105,9 @@
           {
             "basic": []
           }
+        ],
+        "tags": [
+          "Tasks API Methods"
         ]
       },
       "put": {
@@ -386,14 +386,7 @@
           }
         ]
       },
-      "parameters": [
-        {
-          "type": "string",
-          "name": "",
-          "in": "path",
-          "required": true
-        }
-      ]
+     
     },
     "/tasks": {
       "get": {
@@ -813,6 +806,9 @@
       "required": [
         "dueDate",
         "description"
+      ],
+      "x-tags": [
+        "Models"
       ]
     },
     "RestError": {
