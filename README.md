@@ -12,21 +12,29 @@ as well as more informative descriptions for each endpoint.
 The goal of the task is that a reader should not have to switch between the API 
 and user docs to understand what Tasks are in Mambu and how to work with and manipulate them."
 
-### Format
+#### Format
 
 - Changes were to be added to the existing Swagger file
+- Additionally, a standalone HTML file was requested, documenting the results of a UI documentation page audit
 
-### Sources
+#### Sources
 
 - [Tasks API Definition](https://demotenant.dev.mambucloud.com/api/swagger/json/tasks_v2_swagger.json)
 - [End-user API Docs](https://api.mambu.com/#mambu-api-v2-tasks), [Doc2](https://demotenant.dev.mambucloud.com/apidocs/#Tasks)
 - [User Guide Section](https://support.mambu.com/docs/communicating-with-other-users)
 
+### Result
 
-### Tools used
+#### Outputs
 
-- [Swagger API editor](https://swagger.io/tools/swagger-editor/)
-- GitHub
+- [The modified Swagger file](mambu_tasks_v2_swagger_blaho.json)
+- [Documentation of missing information & suggestions](missing_info.md)
+- [Standalone HTML file of a UI documentation audit](mambu_tasks_standalone.html)
+
+#### Tools used
+
+- [Swagger API editor](https://swagger.io/tools/swagger-editor)
+- [GitHub](https://github.com)
 
 ## Work at Mambu
 
